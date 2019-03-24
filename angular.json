@@ -24,6 +24,7 @@
             ],
             "styles": [
               "src/styles/bootstrap-4.3.1-dist/css/bootstrap.min.css",
+              "src/styles/bootstrap-4.3.1-dist/css/bootstrap-theme-dark.min.css",       
               "src/styles.css"
             ],
             "scripts": [],

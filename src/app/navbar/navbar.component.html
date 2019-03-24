@@ -1,0 +1,24 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+  <a class="navbar-brand" routerLink="/">Welcome to my demonstration website</a>
+
+  <div class="collapse navbar-collapse" id="menu-navbar">
+    <ul class="navbar-nav">
+      <li class="{{navbarOption == NavbarMenuOptions.HOME ? 'active' : ''}}">
+        <a class="nav-link" routerLink="/home">Home</a>
+      </li>  
+      <li class="{{navbarOption == NavbarMenuOptions.BIO ? 'active' : ''}}">
+        <a class="nav-link" routerLink="/bio">Bio</a>
+      </li>
+      <li class="{{navbarOption == NavbarMenuOptions.EXPERIENCE ? 'active' : ''}}">
+        <a class="nav-link" routerLink="/experience">Experience</a>
+      </li>
+      <li class="{{navbarOption == NavbarMenuOptions.HOBBIES ? 'active' : ''}}">
+        <a class="nav-link" routerLink="/hobbies">Hobbies</a>
+      </li>
+      <li class="{{navbarOption == NavbarMenuOptions.CONTACT ? 'active' : ''}}">
+        <a class="nav-link" routerLink="/contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>

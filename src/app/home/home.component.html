@@ -1,0 +1,17 @@
+<div class="container-fluid open-close-container" 
+  [@openClose]="isOpen ? 'open' : 'closed'"
+  (click)="toggle()">
+  <div class="row">
+    <div class="col col-lg-8">
+      <p>
+        {{ isOpen ? 'Open' : 'Closed' }}
+        Hi
+        I'm Matheus and welcome to my website, where I'll guide you trough a demonstration of my skills
+      </p>
+      <p>
+        I could have just used a regular wordpress for portfolio, like everybody else, 
+        but instead, I'm gonna show some of my angular and bootstrap skills trough this website
+      </p>
+    </div>
+  </div>
+</div>
