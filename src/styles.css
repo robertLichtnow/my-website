@@ -13,3 +13,8 @@ div{
     -webkit-animation-name: fadeInRight;
     animation-name: fadeInRight;
 }
+
+.fadeInLeft{
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+}
