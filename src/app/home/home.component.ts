@@ -1,11 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import {
   trigger,
   state,
   style,
   animate,
   transition,
-  // ...
 } from '@angular/animations';
 import { AnimationStates } from '../animation-states';
 import { Observable, of } from 'rxjs';
@@ -38,27 +37,27 @@ import { delay } from 'rxjs/operators';
     ]),
   ],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
 
   animationState: AnimationStates = AnimationStates.RIGHT;
 
   constructor() { }
 
   ngOnInit() {
-    this.delay(100).subscribe(() => {
+    this.wait(100).subscribe(() => {
       this.animationState = AnimationStates.MIDDLE;
     });
   }
 
-  delay(time: number): Observable<any>{
-    return of([]).pipe(delay(time));
-  }
-
-  toggle(){
+  ngOnDestroy(){
     this.animationState = AnimationStates.LEFT;
-    this.delay(100).subscribe(() => {
+    this.wait(500).subscribe(() => {
       this.animationState = AnimationStates.RIGHT;
     });
+  }
+
+  wait(time: number): Observable<any>{
+    return of([]).pipe(delay(time));
   }
 
 }

@@ -3,8 +3,9 @@ div{
     font-size: 1.05em;
 }
 
-.container-fluid{
-    padding: 2vh 2vw 2vw 2vh;
+.container{
+    padding: 2vh 0 2vh 0;
+    position: relative;
 }
 
 .hidden { visibility: hidden; }
@@ -17,4 +18,12 @@ div{
 .fadeInLeft{
     -webkit-animation-name: fadeInLeft;
     animation-name: fadeInLeft;
+}
+
+.center-elements{
+    margin: 0 auto;
+}
+
+p{
+    text-align: justify;
 }
