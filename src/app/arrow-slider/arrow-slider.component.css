@@ -1,0 +1,27 @@
+.arrow{
+    position:absolute;
+    bottom: 50vh;
+    height: 60px;
+    width: 60px;
+    line-height: 65px;
+    font-size: 2em;
+    color: #aaa; 
+    border-radius: 50%;
+    text-align: center;
+    z-index: 2;
+}
+
+.arrow:hover,
+.arrow:active,
+.arrow:focus{
+    background-color: rgba(127, 127, 127, 0.192);
+}
+
+.left-arrow{
+    left: 5vw;
+}
+
+.right-arrow{
+    right: 5vw;
+}
+
