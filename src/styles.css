@@ -4,6 +4,7 @@
 
 body{
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 div{
@@ -33,4 +34,15 @@ div{
 
 p{
     text-align: justify;
+}
+
+mgl-timeline-entry-header{
+    box-shadow: -5px 8px 17px -6px rgba(0,0,0,0.24);
+    cursor:pointer;
+}
+
+.expanded>div>div>.dot{
+    line-height: inherit;
+    text-align: left;
+    z-index:inherit;
 }

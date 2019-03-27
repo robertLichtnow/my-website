@@ -6,6 +6,22 @@
         Here's some of my story until now, and I know... it is short, but maybe we can make it get a little bit bigger
       </p>
     </div>
+    <div class="col col-lg-12">
+      <div class="col col-lg-6 center-elements">
+          <mgl-timeline>
+              <mgl-timeline-entry>
+                  <mgl-timeline-entry-header>{{todayEvent.header}}</mgl-timeline-entry-header>
+                  <mgl-timeline-entry-content>{{todayEvent.content}}</mgl-timeline-entry-content>
+                  <mgl-timeline-entry-dot [size]="30" class="dot">{{todayEvent.date}}</mgl-timeline-entry-dot>
+              </mgl-timeline-entry>
+              <mgl-timeline-entry *ngFor="let event of events">
+                  <mgl-timeline-entry-header>{{event.header}}</mgl-timeline-entry-header>
+                  <mgl-timeline-entry-content><span [innerHTML]="event.link ? '<a target=_blank href=' + event.link + '>' + event.content + '</a>' : event.content"></span></mgl-timeline-entry-content>
+                  <mgl-timeline-entry-dot [size]="50" class="dot">{{parseDate(event.date)}}</mgl-timeline-entry-dot>
+              </mgl-timeline-entry>
+          </mgl-timeline>
+      </div>
+    </div>
   </div>
 </div>
 

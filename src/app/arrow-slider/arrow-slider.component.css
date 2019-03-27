@@ -25,3 +25,13 @@
     right: 5vw;
 }
 
+.disabled-arrow{
+    color: rgba(170, 170, 170, 0.479);
+}
+
+.disabled-arrow:hover,
+.disabled-arrow:active,
+.disable-arrow:focus{
+    background-color: inherit;
+}
+

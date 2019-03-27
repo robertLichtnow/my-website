@@ -1,11 +1,11 @@
-<a routerLink="{{leftLink ? leftLink : '/'}}">
-  <div class="arrow left-arrow">
+<a routerLink="{{leftLink ? leftLink : ''}}">
+  <div class="arrow left-arrow {{leftLink ? '' : 'disabled-arrow'}}">
     <span class="oi oi-chevron-left"></span>
   </div>
 </a>
 
 <a routerLink="{{rightLink ? rightLink : '/'}}">
-  <div class="arrow right-arrow">
+  <div class="arrow right-arrow {{rightLink ? '' : 'disabled-arrow'}}">
     <span class="oi oi-chevron-right"></span>
   </div>
 </a>

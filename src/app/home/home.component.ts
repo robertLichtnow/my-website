@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor() { }
 
   ngOnInit() {
-    this.wait(100).subscribe(() => {
+    this.wait(0).subscribe(() => {
       this.animationState = AnimationStates.MIDDLE;
     });
   }
