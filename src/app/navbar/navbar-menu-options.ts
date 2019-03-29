@@ -1,7 +1,7 @@
 export enum NavbarMenuOptions{
     HOME = '/home',
     BIO = '/bio',
-    EXPERIENCE = '/experience',
+    SKILLS = '/skills',
     HOBBIES = '/hobbies',
     CONTACT = '/contact'
 }

@@ -20,8 +20,8 @@ export class AppComponent{
     switch(this.router.url){
       case '/bio':
         return NavbarMenuOptions.BIO;
-      case '/experience':
-        return NavbarMenuOptions.EXPERIENCE;
+      case '/skills':
+        return NavbarMenuOptions.SKILLS;
       case '/hobbies':
         return NavbarMenuOptions.HOBBIES;
       case '/contact':
@@ -36,10 +36,10 @@ export class AppComponent{
     switch(this.router.url){
       case '/bio':
         return NavbarMenuOptions.HOME;
-      case '/experience':
+      case '/skills':
         return NavbarMenuOptions.BIO;
       case '/hobbies':
-        return NavbarMenuOptions.EXPERIENCE;
+        return NavbarMenuOptions.SKILLS;
       case '/contact':
         return NavbarMenuOptions.HOBBIES;
       case '/home':
@@ -53,8 +53,8 @@ export class AppComponent{
       case '/home':
         return NavbarMenuOptions.BIO;
       case '/bio':
-        return NavbarMenuOptions.EXPERIENCE;
-      case '/experience':
+        return NavbarMenuOptions.SKILLS;
+      case '/skills':
         return NavbarMenuOptions.HOBBIES;
       case '/hobbies':
         return NavbarMenuOptions.CONTACT;
