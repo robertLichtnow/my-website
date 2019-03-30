@@ -1,5 +1,5 @@
 .arrow{
-    position:absolute;
+    position:fixed;
     bottom: 50vh;
     height: 60px;
     width: 60px;
@@ -25,13 +25,9 @@
     right: 5vw;
 }
 
-.disabled-arrow{
-    color: rgba(170, 170, 170, 0.479);
-}
-
-.disabled-arrow:hover,
-.disabled-arrow:active,
-.disable-arrow:focus{
-    background-color: inherit;
+@media(max-width: 992px){
+    .arrow{
+        bottom: 5vh;
+    }
 }
 
