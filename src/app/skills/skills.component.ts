@@ -43,22 +43,45 @@ export class SkillsComponent implements OnInit, OnDestroy {
 
   animationState: AnimationStates = AnimationStates.RIGHT;
 
-  _mySkills:Skills;
+  _mySoftSkills:Skills;
 
-  chart = [];
+  softSkillsChart = [];
 
-  get mySkills():Skills{
-    if(this._mySkills == null ){
-      this._mySkills = new Skills();
-      this._mySkills.skills.set("TS/JS",5);
-      this._mySkills.skills.set("Java",4);
-      this._mySkills.skills.set("Angular",5);
-      this._mySkills.skills.set("Fast Learning",6);
-      this._mySkills.skills.set("Team Work", 4);
-      this._mySkills.skills.set("Design Thinking", 5);
+  get mySoftSkills():Skills{
+    if(this._mySoftSkills == null ){
+      this._mySoftSkills = new Skills();
+      this._mySoftSkills.skills.set("Self-Motivation",6);
+      this._mySoftSkills.skills.set("Problem Solving",5);
+      this._mySoftSkills.skills.set("Communication",4);    
+      this._mySoftSkills.skills.set("Leadership",3);
+      this._mySoftSkills.skills.set("Negotiation", 2);
+      this._mySoftSkills.skills.set("Work Under Pressure",4);
+      this._mySoftSkills.skills.set("Flexibility", 6);
+      this._mySoftSkills.skills.set("Team Work", 4);
+      this._mySoftSkills.skills.set("Open Mind", 6);
+      this._mySoftSkills.skills.set("Responsibility",5);
     }
-    return this._mySkills;
+    return this._mySoftSkills;
   }
+
+  _myHardSkills:Skills;
+
+  hardSkillsChart = [];
+
+  get myHardSkills():Skills{
+    if(this._myHardSkills == null ){
+      this._myHardSkills = new Skills();
+      this._myHardSkills.skills.set("Angular",6);
+      this._myHardSkills.skills.set("JS/TS",5);
+      this._myHardSkills.skills.set("Java",5);
+      this._myHardSkills.skills.set("Git",4);    
+      this._myHardSkills.skills.set("Docker", 2);
+      this._myHardSkills.skills.set("PHP",3);
+      this._myHardSkills.skills.set("Scrum",4);
+    }
+    return this._myHardSkills;
+  }
+
   
 
   constructor() { }
@@ -68,20 +91,28 @@ export class SkillsComponent implements OnInit, OnDestroy {
       this.animationState = AnimationStates.MIDDLE;
     });
 
-    let colors:string[] = [];
-    for(let i=6;i--;){
-      colors.push(this.getRandomColor());
-    }
+    this.loadSoftSkillsChart();
+    this.loadHardSkillsChart();
+    
+  }
 
-    this.chart = new Chart('skills-canvas',{
+  ngOnDestroy(){
+    this.animationState = AnimationStates.LEFT;
+    wait(500).subscribe(() => {
+      this.animationState = AnimationStates.RIGHT;
+    });
+  }
+
+  private loadSoftSkillsChart(){
+    this.softSkillsChart = new Chart('soft-skills-canvas',{
       type: 'radar',
       data: {
-        labels: Array.from(this.mySkills.skills.keys()),
+        labels: Array.from(this.mySoftSkills.skills.keys()),
         datasets: [
           {
-            label: "My Skills",
-            data: Array.from(this.mySkills.skills.values()),
-            backgroundColor: this.getRandomColor()
+            label: "Soft Skills",
+            data: Array.from(this.mySoftSkills.skills.values()),
+            backgroundColor: '#499F6860'
           }
         ]
       },
@@ -89,16 +120,66 @@ export class SkillsComponent implements OnInit, OnDestroy {
         scale: {
           ticks: {
             beginAtZero: true
+          },
+          gridLines:{
+            color: ['#BBB','#BBB','#BBB','#BBB','#BBB','#BBB'],
+            lineWidth: 1.15
+          },
+          pointLabels:{
+            fontSize: 14
           }
         },
+        tooltips:{
+          callbacks:{
+            label: (tooltipItem, chart) => {
+              const value = chart.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+              const label = chart.labels[tooltipItem.index] + ':';
+              return label + value;
+            },
+            title:()=>{}
+          }
+        }
       }
     });
   }
 
-  ngOnDestroy(){
-    this.animationState = AnimationStates.LEFT;
-    wait(500).subscribe(() => {
-      this.animationState = AnimationStates.RIGHT;
+  private loadHardSkillsChart(){
+    this.hardSkillsChart = new Chart('hard-skills-canvas',{
+      type: 'radar',
+      data: {
+        labels: Array.from(this.myHardSkills.skills.keys()),
+        datasets: [
+          {
+            label: "Hard Skills",
+            data: Array.from(this.myHardSkills.skills.values()),
+            backgroundColor: '#7135A560'
+          }
+        ]
+      },
+      options:{
+        scale: {
+          ticks: {
+            beginAtZero: true
+          },
+          gridLines:{
+            color: ['#BBB','#BBB','#BBB','#BBB','#BBB','#BBB'],
+            lineWidth: 1.15
+          },
+          pointLabels:{
+            fontSize: 14
+          }
+        },
+        tooltips:{
+          callbacks:{
+            label: (tooltipItem, chart) => {
+              const value = chart.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+              const label = chart.labels[tooltipItem.index] + ':';
+              return label + value;
+            },
+            title:()=>{}
+          }
+        }
+      }
     });
   }
 
@@ -109,7 +190,7 @@ export class SkillsComponent implements OnInit, OnDestroy {
       color += letters[Math.floor(Math.random() * 16)];
     }
     //alpha
-    color += '20';
+    color += '50';
     return color;
   }
 
