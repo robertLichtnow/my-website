@@ -8,7 +8,8 @@
     color: #aaa; 
     border-radius: 50%;
     text-align: center;
-    z-index: 2;
+    z-index: 2000;
+    text-shadow:2px 4px 3px rgba(0,0,0,0.3);
 }
 
 .arrow:hover,
@@ -25,7 +26,7 @@
     right: 5vw;
 }
 
-@media(max-width: 992px){
+@media(max-width: 991px){
     .arrow{
         bottom: 5vh;
     }

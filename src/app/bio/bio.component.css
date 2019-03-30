@@ -1,10 +1,11 @@
 .dot{
-    background-color: #e9bcbc;
+    background-color: #F2797D;
     line-height:50px;
     font-size:0.8em;
     margin:auto;
     text-align: center;
     z-index: 10;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 11px 24px 0 rgba(0, 0, 0, 0.05);
 }
 
 
