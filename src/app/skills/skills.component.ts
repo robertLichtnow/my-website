@@ -77,7 +77,10 @@ export class SkillsComponent implements OnInit, OnDestroy {
       this._myHardSkills.skills.set("Git",4);    
       this._myHardSkills.skills.set("Docker", 2);
       this._myHardSkills.skills.set("PHP",3);
+      this._myHardSkills.skills.set("Jira/Trello", 5);
       this._myHardSkills.skills.set("Scrum",4);
+      this._myHardSkills.skills.set("Bootstrap 4", 5);
+      this._myHardSkills.skills.set("CSS", 4);
     }
     return this._myHardSkills;
   }
