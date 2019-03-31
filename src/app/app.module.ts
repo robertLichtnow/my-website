@@ -11,6 +11,7 @@ import { BioComponent } from './bio/bio.component';
 import { ArrowSliderComponent } from './arrow-slider/arrow-slider.component';
 import { MglTimelineModule } from 'angular-mgl-timeline';
 import { SkillsComponent } from './skills/skills.component';
+import { HobbiesComponent } from './hobbies/hobbies.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SkillsComponent } from './skills/skills.component';
     HomeComponent,
     BioComponent,
     ArrowSliderComponent,
-    SkillsComponent
+    SkillsComponent,
+    HobbiesComponent
   ],
   imports: [
     BrowserModule,

@@ -19,11 +19,11 @@
 }
 
 .left-arrow{
-    left: 5vw;
+    left: 4vw;
 }
 
 .right-arrow{
-    right: 5vw;
+    right: 4vw;
 }
 
 @media(max-width: 991px){

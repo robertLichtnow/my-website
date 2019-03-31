@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BioComponent } from './bio/bio.component';
 import { SkillsComponent } from './skills/skills.component';
+import { HobbiesComponent } from './hobbies/hobbies.component';
 
 const routes: Routes = [
   {path: 'home', component:HomeComponent},
   {path: 'bio', component:BioComponent},
   {path: 'skills', component:SkillsComponent},
+  {path: 'hobbies', component:HobbiesComponent},
   {path: '**', redirectTo:'home', pathMatch: 'full'},
 ];
 
