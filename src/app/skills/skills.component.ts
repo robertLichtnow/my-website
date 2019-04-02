@@ -113,11 +113,18 @@ export class SkillsComponent implements OnInit, OnDestroy {
           {
             label: "Soft Skills",
             data: Array.from(this.mySoftSkills.skills.values()),
-            backgroundColor: '#499F6860'
+            backgroundColor: '#499F6870',
+            pointBackgroundColor: '#5ebc80AA'
           }
         ]
       },
       options:{
+        legend:{
+          labels:{
+            fontColor: "#FFFFFF",
+            fontSize: 16
+          }
+        },
         scale: {
           ticks: {
             beginAtZero: true
@@ -127,7 +134,8 @@ export class SkillsComponent implements OnInit, OnDestroy {
             lineWidth: 1.15
           },
           pointLabels:{
-            fontSize: 14
+            fontSize: 14,
+            fontColor: '#FFFFFF'
           }
         },
         tooltips:{
@@ -153,11 +161,18 @@ export class SkillsComponent implements OnInit, OnDestroy {
           {
             label: "Hard Skills",
             data: Array.from(this.myHardSkills.skills.values()),
-            backgroundColor: '#7135A560'
+            backgroundColor: '#7135A570',
+            pointBackgroundColor: '#974fd6'
           }
         ]
       },
       options:{
+        legend:{
+          labels:{
+            fontColor: "#FFFFFF",
+            fontSize: 16
+          }
+        },
         scale: {
           ticks: {
             beginAtZero: true
@@ -167,7 +182,8 @@ export class SkillsComponent implements OnInit, OnDestroy {
             lineWidth: 1.15
           },
           pointLabels:{
-            fontSize: 14
+            fontSize: 14,
+            fontColor: '#FFFFFF'
           }
         },
         tooltips:{

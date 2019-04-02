@@ -1,6 +1,7 @@
 @media(max-width: 992px){
     .page{
         padding: 0 5vw;
+        margin-bottom: 10vw;
     }
 }
 

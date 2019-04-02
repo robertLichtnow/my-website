@@ -39,10 +39,24 @@ p{
 mgl-timeline-entry-header{
     box-shadow: -5px 8px 17px -6px rgba(0,0,0,0.24);
     cursor:pointer;
+    color: #000;
+}
+
+mgl-timeline-entry-content{
+    color: #000;
 }
 
 .expanded>div>div>.dot{
     line-height: inherit;
     text-align: left;
     z-index:inherit;
+}
+
+.bg-primary{
+    background-color: #243444!important;
+}
+
+body{
+    background-color:#1e2c3a;
+    color: #FFF;
 }

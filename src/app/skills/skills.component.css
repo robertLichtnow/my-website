@@ -1,3 +1,13 @@
 .lead{
     margin-bottom: 20px;
 }
+
+.chart-card-container{
+    padding:2vh 2vw;
+}
+
+.chart-card{
+    background-color: #243444;
+    padding: 2vh 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 11px 24px 0 rgba(0, 0, 0, 0.15);
+}

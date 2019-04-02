@@ -9,7 +9,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent{
-  title = 'Robddev';
+  title = 'RDSolutions';
 
   constructor(private router: Router,
               private titleService: Title){
