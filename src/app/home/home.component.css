@@ -25,8 +25,10 @@
 
 @media(max-width: 991px){
     .banner{
-        height:250px;
+        height: auto;
+        min-height:200px;
         width: calc(100% + 10vw);
+        background-size: 150vw;
         margin-left: -5vw;
         margin-right: -5vw;
     }
