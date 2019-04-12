@@ -1,6 +1,6 @@
 # MyWebsite
 
-Project for my own website hosted at {{website.url/onprogress}}
+Project for my own website hosted at https://rdsolutions.dev
 
 ## Idea behind
 
