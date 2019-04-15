@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 import { TimelineItem } from './timeline-item';
 
 @Component({
@@ -16,4 +16,8 @@ export class TimelineItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  parseDate(date: Date):string{
+    return `${("0" + (date.getMonth() + 1)).slice(-2)}/${date.getFullYear().toString().substr(2,4)}`;
+  }
+  
 }

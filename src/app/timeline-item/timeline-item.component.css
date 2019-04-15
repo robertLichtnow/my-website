@@ -101,4 +101,8 @@
     left:42px;
 }
 
-
+@media(max-width: 575px){
+    .bar{
+        height:calc(100% + 10px);
+    }
+}
