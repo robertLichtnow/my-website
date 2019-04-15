@@ -1,0 +1,50 @@
+<div *ngFor="let item of items; let i=index" class="d-none d-sm-block">
+    <div *ngIf="i % 2 == 0" class="row">
+        <div class="col col-lg-6 left">
+            <div class="message-block">
+                <div class="bar"></div>
+                <div class="dot"></div>
+                <div class="arrow-right"></div>
+                <div class="message-header">{{item.title}} - {{parseDate(item.date)}}</div>
+                <div class="message-body">
+                    <a [hidden]="!item.link" [href]="item.link" target="_blank">{{item.body}}</a>
+                    <span [hidden]="item.link">{{item.body}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-6"></div>
+    </div>
+    <div *ngIf="i % 2 == 1" class="row">
+        <div class="col col-lg-6"></div>
+        <div class="col col-lg-6 right">
+            <div class="message-block">
+                <div class="message-header right">{{item.title}} - {{parseDate(item.date)}}</div>
+                <div class="message-body right">
+                    <a [hidden]="!item.link" [href]="item.link" target="_blank">{{item.body}}</a>
+                    <span [hidden]="item.link">{{item.body}}</span>
+                </div>
+                <div class="bar right"></div>
+                <div class="dot right"></div>
+                <div class="arrow-left"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngFor="let item of items; let i=index" class="d-block d-sm-none">
+    <div class="row">
+        <div class="col col-lg-12 left">
+            <div class="message-block">
+                <div class="bar"></div>
+                <div class="dot"></div>
+                <div class="arrow-right"></div>
+                <div class="message-header">{{item.title}} - {{parseDate(item.date)}}</div>
+                <div class="message-body">
+                    <a [hidden]="!item.link" [href]="item.link" target="_blank">{{item.body}}</a>
+                    <span [hidden]="item.link">{{item.body}}</span>
+                </div>
+            </div>
+        </div>
+        <div style="margin-bottom:20px; width:100%;"></div>
+    </div>
+</div>

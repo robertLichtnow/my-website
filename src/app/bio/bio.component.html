@@ -1,5 +1,4 @@
-<div class="container"
-  [@right-middle-left]="animationState">
+<div class="container" [@right-middle-left]="animationState">
   <div class="row">
     <div class="col col-lg-8 center-elements">
       <h3>Bio</h3>
@@ -8,24 +7,7 @@
       </p>
     </div>
   </div>
-  <div class="row">
-    <div class="col col-lg-12">
-      <div class="col col-lg-6 center-elements">
-          <mgl-timeline>
-              <mgl-timeline-entry>
-                  <mgl-timeline-entry-header>{{todayEvent.header}}</mgl-timeline-entry-header>
-                  <mgl-timeline-entry-content>{{todayEvent.content}}</mgl-timeline-entry-content>
-                  <mgl-timeline-entry-dot [size]="30" class="dot">{{todayEvent.date}}</mgl-timeline-entry-dot>
-              </mgl-timeline-entry>
-              <mgl-timeline-entry *ngFor="let event of events">
-                  <mgl-timeline-entry-header>{{event.header}}</mgl-timeline-entry-header>
-                  <mgl-timeline-entry-content><span [innerHTML]="event.link ? '<a target=_blank href=' + event.link + '>' + event.content + '</a>' : event.content"></span></mgl-timeline-entry-content>
-                  <mgl-timeline-entry-dot [size]="50" class="dot">{{parseDate(event.date)}}</mgl-timeline-entry-dot>
-              </mgl-timeline-entry>
-          </mgl-timeline>
-      </div>
-    </div>
-  </div>
+
+  <app-timeline-item [items]="items"></app-timeline-item>
+
 </div>
-
-
